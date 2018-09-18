@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShortAnswerQuestionTests.cs" />
+    <Compile Include="MultipleChoiceQuestionTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

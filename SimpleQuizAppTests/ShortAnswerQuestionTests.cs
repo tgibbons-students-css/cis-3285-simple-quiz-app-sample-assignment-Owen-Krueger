@@ -115,23 +115,49 @@ namespace SimpleQuizApplication.Tests
             Assert.IsTrue(q.checkAnswer(strLowerCaseAnswer));
         }
         [TestMethod()]
-        // Many people would suggest that this test is bad since it test two different things
-        // Test space before answer and space after answer
-        public void checkAnswer_ExtrasSpaceTest()
+        public void checkAnswer_ExtrasSpaceBeforeTest()
         {
             // Arrange
             String strQuestion = "Test question here?";
             String strAnswer = "Answer to question";
-            String strAnswerWithSpaceAfter = "Answer to question ";
             String strAnswerWithSpaceBefore = " Answer to question";
             Question q = new ShortAnswerQuestion(strQuestion, strAnswer);
 
             //Act
 
             //Assert
-            Assert.IsTrue(q.checkAnswer(strAnswerWithSpaceAfter));
             Assert.IsTrue(q.checkAnswer(strAnswerWithSpaceBefore));
         }
+        [TestMethod()]
+        public void checkAnswer_ExtrasSpaceAfterTest()
+        {
+            // Arrange
+            String strQuestion = "Test question here?";
+            String strAnswer = "Answer to question";
+            String strAnswerWithSpaceAfter = "Answer to question ";
+            Question q = new ShortAnswerQuestion(strQuestion, strAnswer);
+
+            //Act
+
+            //Assert
+            Assert.IsTrue(q.checkAnswer(strAnswerWithSpaceAfter));
+        }
+
+        [TestMethod()]
+        public void checkAnswer_ExtrasSpaceInMiddleTest()
+        {
+            // Arrange
+            String strQuestion = "Test question here?";
+            String strAnswer = "Answer to question";
+            String strAnswerWithSpaceInMiddle = "Answer  to question ";
+            Question q = new ShortAnswerQuestion(strQuestion, strAnswer);
+
+            //Act
+
+            //Assert
+            Assert.IsTrue(q.checkAnswer(strAnswerWithSpaceInMiddle));
+        }
+
         [TestMethod()]
         public void checkAnswer_WrongAnswerTest()
         {
