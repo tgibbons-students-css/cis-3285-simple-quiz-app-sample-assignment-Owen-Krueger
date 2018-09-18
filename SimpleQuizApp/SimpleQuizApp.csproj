@@ -57,6 +57,7 @@
     <Compile Include="Question.cs" />
     <Compile Include="ShortAnswerQuestion.cs" />
     <Compile Include="SimpleQuizModel.cs" />
+    <Compile Include="TrueFalseQuestion.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
