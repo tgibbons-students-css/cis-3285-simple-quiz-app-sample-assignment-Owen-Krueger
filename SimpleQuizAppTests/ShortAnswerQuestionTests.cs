@@ -62,7 +62,7 @@ namespace SimpleQuizApplication.Tests
         {
             // Arrange
             String strQuestion = "Test 201";
-            String strAnswer = "Answer 201";
+            String strAnswer = "Answer201";
             Question q = new ShortAnswerQuestion(strQuestion, strAnswer);
 
             //Act
